@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monigol | Mis Predicciones</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container predictions-page">
+        <!-- Background elements -->
+        <div class="bg-glow top-right"></div>
+        <div class="bg-glow bottom-left"></div>
+        
+        <header class="app-header">
+          <div class="header-content">
+            <a href="/index.html"><img src="/logo.png" alt="Monigol Logo" class="nav-logo" /></a>
+            <div class="user-profile">
+              <span id="user-name">Cargando...</span>
+              <img id="user-avatar" src="https://via.placeholder.com/40" alt="User Avatar" class="avatar-img" />
+              <button id="logout-btn" class="btn btn-secondary btn-sm">Salir</button>
+            </div>
+          </div>
+        </header>
+
+        <main class="predictions-main">
+          <div class="section-header">
+            <h2>Próximos Partidos</h2>
+            <p>Selecciona tu equipo ganador y suma puntos para el ranking.</p>
+          </div>
+
+          <div class="matches-grid" id="matches-container">
+            <!-- Partidos se renderizarán aquí -->
+            <div class="loading-state">Cargando partidos...</div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/js/predictions-ui.js"></script>
+  </body>
+</html>

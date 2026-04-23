@@ -1,21 +1,246 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monigol – Predice, compite y gana</title>
-    <link rel="stylesheet" href="/src/assets/styles.css" />
-  </head>
-  <body>
-    <div class="hero-section">
-      <div class="glass-card">
-        <img src="/src/assets/hero.png" alt="Monigol mascot" class="mascot" />
-        <h1>Monigol</h1>
-        <p class="slogan">Predice, compite y gana</p>
-        <a href="/src/onboarding.html" class="cta-button">¡Comienza ahora!</a>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monigol – Predice el Mundial 2026 | Compite y Gana</title>
+  <meta name="description" content="La plataforma de predicciones más brutal del Mundial 2026. Predice, compite con miles de jugadores y gana premios increíbles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <img src="/logo.png" alt="Monigol" class="nav-logo" />
+    <div class="nav-actions">
+      <button class="btn btn-ghost btn-sm" id="btn-login">Iniciar sesión</button>
+      <button class="btn btn-primary btn-sm" id="btn-register">Empieza a jugar</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="/hero.png" alt="" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Mundial 2026 · USA · MEX · CAN
+        </div>
+        <h1 class="hero-title">Predice el<br><span class="accent">Mundial 2026</span></h1>
+        <p class="hero-sub">Compite. Gana. Demuestra que sabes de fútbol.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" id="hero-cta-primary">Empieza a jugar 🚀</button>
+          <a href="#prizes" class="btn btn-outline btn-lg">Ver premios 🏆</a>
+        </div>
+      </div>
+      <div class="hero-mascot">
+        <div class="hero-mascot-glow"></div>
+        <img src="/mascot.png" alt="Monigol Mascota" class="hero-mascot-img" />
       </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </section>
+
+  <!-- ===== COUNTDOWN ===== -->
+  <div class="countdown-section">
+    <p class="countdown-label">⚽ Faltan para el Mundial 2026</p>
+    <div class="countdown-timer">
+      <div class="countdown-unit">
+        <span class="countdown-number" id="cd-days">000</span>
+        <span class="countdown-text">Días</span>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="cd-hours">00</span>
+        <span class="countdown-text">Horas</span>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="cd-minutes">00</span>
+        <span class="countdown-text">Min</span>
+      </div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit">
+        <span class="countdown-number" id="cd-seconds">00</span>
+        <span class="countdown-text">Seg</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== PREMIOS ===== -->
+  <section class="section prizes-section animate-on-scroll" id="prizes">
+    <div>
+      <div class="section-label">🏆 Premios</div>
+      <h2 class="section-title">Gana en grande</h2>
+      <p class="section-sub">Los mejores predictores se llevan premios que valen la pena. ¿Tienes lo que se necesita?</p>
+      <div class="prizes-grid">
+        <div class="prize-card animate-on-scroll">
+          <span class="prize-icon">🏍️</span>
+          <span class="prize-place">1er Lugar</span>
+          <h3 class="prize-name">Motocicleta</h3>
+          <p class="prize-desc">El campeón absoluto de predicciones se lleva una moto de última generación.</p>
+        </div>
+        <div class="prize-card animate-on-scroll">
+          <span class="prize-icon">💰</span>
+          <span class="prize-place">2do Lugar</span>
+          <h3 class="prize-name">Bolsa de Efectivo</h3>
+          <p class="prize-desc">El subcampeón recibe una generosa bolsa en efectivo para celebrar como se merece.</p>
+        </div>
+        <div class="prize-card animate-on-scroll">
+          <span class="prize-icon">🎟️</span>
+          <span class="prize-place">3er Lugar</span>
+          <h3 class="prize-name">Viaje al Mundial</h3>
+          <p class="prize-desc">El tercer lugar vivirá la experiencia del Mundial en carne propia. Vuelo + hotel incluidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== CÓMO FUNCIONA ===== -->
+  <section class="section animate-on-scroll" id="how-it-works">
+    <div class="section-label">📋 Cómo Funciona</div>
+    <h2 class="section-title">Simple. Emocionante. Épico.</h2>
+    <p class="section-sub">En 3 pasos estás dentro de la competencia más grande del año.</p>
+    <div class="how-grid">
+      <div class="how-card animate-on-scroll">
+        <span class="how-number">01</span>
+        <span class="how-icon">🎯</span>
+        <h3 class="how-title">Predice</h3>
+        <p class="how-desc">Antes de cada partido, elige quién crees que ganará. Cada predicción correcta suma puntos.</p>
+      </div>
+      <div class="how-card animate-on-scroll">
+        <span class="how-number">02</span>
+        <span class="how-icon">⚔️</span>
+        <h3 class="how-title">Compite</h3>
+        <p class="how-desc">Escala en el ranking global y demuestra que tu criterio futbolístico es superior al del resto.</p>
+      </div>
+      <div class="how-card animate-on-scroll">
+        <span class="how-number">03</span>
+        <span class="how-icon">🏆</span>
+        <h3 class="how-title">Gana</h3>
+        <p class="how-desc">Los mejores del ranking al final del torneo se llevan los premios. Sin trampa, puro fútbol.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section class="section social-section animate-on-scroll">
+    <div class="social-stats">
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-number">+1,000</div>
+        <div class="stat-label">Jugadores activos</div>
+      </div>
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-number">64</div>
+        <div class="stat-label">Partidos para predecir</div>
+      </div>
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Premios increíbles</div>
+      </div>
+    </div>
+    <div class="ranking-preview animate-on-scroll">
+      <p class="ranking-title">🔥 Top jugadores esta semana</p>
+      <div class="ranking-list">
+        <div class="ranking-item first">
+          <span class="ranking-pos">1</span>
+          <div class="ranking-avatar">🐵</div>
+          <span class="ranking-name">ElProfesor_GOL</span>
+          <span class="ranking-points">2,450 pts</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">2</span>
+          <div class="ranking-avatar">⚽</div>
+          <span class="ranking-name">BarcelonistaMX</span>
+          <span class="ranking-points">2,210 pts</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-pos">3</span>
+          <div class="ranking-avatar">🦁</div>
+          <span class="ranking-name">Aguila10_Pred</span>
+          <span class="ranking-points">1,980 pts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="section" style="text-align:center; padding-top:2rem;">
+    <h2 class="section-title animate-on-scroll">¿Listo para demostrar<br>que sabes de fútbol?</h2>
+    <p class="section-sub animate-on-scroll" style="margin:1rem auto 2.5rem;">Únete ahora y no te pierdas ni un partido del Mundial 2026.</p>
+    <button class="btn btn-primary btn-lg animate-on-scroll" id="final-cta">Empieza a jugar gratis 🚀</button>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/logo.png" alt="Monigol" class="nav-logo" />
+        <p class="footer-desc">La plataforma de predicciones del Mundial 2026. Predice, compite y gana.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Plataforma</p>
+        <div class="footer-links">
+          <a href="#how-it-works" class="footer-link">Cómo funciona</a>
+          <a href="#prizes" class="footer-link">Premios</a>
+          <a href="/onboarding.html" class="footer-link">Registrarse</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Legal</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Términos de uso</a>
+          <a href="#" class="footer-link">Privacidad</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Monigol. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ para los amantes del fútbol</span>
+    </div>
+  </footer>
+
+  <!-- ===== AUTH MODAL ===== -->
+  <div class="modal-overlay" id="auth-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <img src="/mascot.png" alt="Monigol" class="modal-mascot" />
+      <h2 class="modal-title">¡Únete a Monigol!</h2>
+      <p class="modal-sub">Regístrate gratis y empieza a predecir el Mundial 2026</p>
+      <div class="modal-tabs">
+        <div class="modal-tab active" id="tab-register">Registrarse</div>
+        <div class="modal-tab" id="tab-login">Iniciar sesión</div>
+      </div>
+      <button class="btn-google" id="google-auth-btn">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
+        Continuar con Google
+      </button>
+      <div class="divider-or">o</div>
+      <div class="form-group">
+        <label class="form-label">Correo electrónico</label>
+        <input type="email" class="form-input" id="modal-email" placeholder="tu@email.com" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Contraseña</label>
+        <input type="password" class="form-input" id="modal-password" placeholder="Mínimo 6 caracteres" />
+      </div>
+      <button class="btn btn-primary btn-full" id="modal-submit">Empieza a jugar 🚀</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/landing.js"></script>
+</body>
 </html>

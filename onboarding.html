@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido a Monigol | Registro</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container center-content">
+        <div class="bg-glow top-right"></div>
+        <div class="bg-glow bottom-left"></div>
+
+        <div class="auth-card glass-card">
+          <header class="auth-header">
+            <img src="/logo.png" alt="Monigol Logo" class="auth-logo" />
+          </header>
+
+          <div class="auth-body">
+            <div class="mascot-mini">
+              <img src="/mascot.png" alt="Monigol Mascot" />
+            </div>
+            <h2>¡Hola, Futuro Campeón!</h2>
+            <p>Para empezar a predecir y ganar premios, necesitamos que te identifiques.</p>
+            
+            <button id="google-login-btn" class="btn btn-primary btn-full">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="btn-icon" />
+              Entrar con Google
+            </button>
+            
+            <p class="auth-footer">Al registrarte, aceptas nuestros términos y condiciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/js/onboarding-ui.js"></script>
+  </body>
+</html>

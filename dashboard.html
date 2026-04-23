@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monigol – Dashboard</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <img src="./public/logo.png" alt="Monigol Logo" class="logo" />
+    <div class="user-info">
+      <img id="user-avatar" class="avatar" src="" alt="Avatar" />
+      <span id="user-name" class="user-name"></span>
+      <button id="logout-btn" class="btn logout-btn">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="upcoming-matches">
+      <h2>Próximos partidos</h2>
+      <div id="matches-container" class="matches-grid"></div>
+    </section>
+
+    <section class="ranking">
+      <h2>Top 5 Ranking</h2>
+      <ul id="ranking-list" class="ranking-list"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="./js/dashboard-ui.js"></script>
+</body>
+</html>
